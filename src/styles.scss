@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+
+  background-image: url(assets/img/viaboxx-logo.png);
+  background-repeat: no-repeat;
+  background-position: top 58px right 50px;
+  background-size: 350px;
+
+  height: 100vh;
+  overflow: auto;
+}
+
+h1 {
+  text-align: center;
+}

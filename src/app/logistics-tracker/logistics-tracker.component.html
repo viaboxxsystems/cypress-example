@@ -1,0 +1,83 @@
+<h1>Logistics tracker</h1>
+
+<div class="basic-container">
+
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+
+  <table mat-table [dataSource]='dataSource' class="mat-elevation-z12" matSort>
+
+    <ng-container matColumnDef="state">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> State</th>
+      <td mat-cell *matCellDef='let pallet'>{{pallet.status}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="internalId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Internal-ID</th>
+      <td mat-cell *matCellDef='let pallet'>{{pallet.internalId}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="palletId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Pallet-ID</th>
+      <td mat-cell *matCellDef='let pallet'>{{pallet.barcode}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="matchProbability">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Match-Probability</th>
+      <td mat-cell *matCellDef='let pallet'>{{pallet.matchProbability}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="scanTime">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Scan-Time</th>
+      <td mat-cell *matCellDef='let pallet'>{{pallet.barcodeScanTime}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="volume">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Volume</th>
+      <td mat-cell *matCellDef='let pallet'>{{pallet.volume}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="length">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Length</th>
+      <td mat-cell *matCellDef='let pallet'>{{pallet.length}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="width">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Width</th>
+      <td mat-cell *matCellDef='let pallet'>{{pallet.width}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="height">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Height</th>
+      <td mat-cell *matCellDef='let pallet'>{{pallet.height}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="x">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> X</th>
+      <td mat-cell *matCellDef='let pallet'>{{pallet.x}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="y">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Y</th>
+      <td mat-cell *matCellDef='let pallet'>{{pallet.y}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="z">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Z</th>
+      <td mat-cell *matCellDef='let pallet'>{{pallet.z}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="transportationStatus">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Transport-Status</th>
+      <td mat-cell *matCellDef='let pallet'>{{pallet.transportationStatus}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef='let row; columns: displayedColumns;'></tr>
+
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons></mat-paginator>
+
+</div>
