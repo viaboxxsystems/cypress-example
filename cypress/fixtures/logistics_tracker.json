@@ -1,0 +1,38 @@
+[
+  {
+    "internalId": 1,
+    "barcode": "02357200-1290",
+    "x": 10,
+    "y": 150,
+    "z": 0,
+    "transportationStatus": "Moving",
+    "status": "OK"
+  },
+  {
+    "internalId": 2,
+    "barcode": "120067500-009",
+    "x": 100,
+    "y": 150,
+    "z": 0,
+    "transportationStatus": "Standing",
+    "status": "OK"
+  },
+  {
+    "internalId": 3,
+    "barcode": "12312311-56",
+    "x": 10,
+    "y": 35,
+    "z": 0,
+    "transportationStatus": "Moving",
+    "status": "OK"
+  },
+  {
+    "internalId": 4,
+    "barcode": "00116787-789",
+    "x": 50,
+    "y": 50,
+    "z": 0,
+    "transportationStatus": "Standing",
+    "status": "OK"
+  }
+]

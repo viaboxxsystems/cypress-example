@@ -1,0 +1,12 @@
+{
+  "baseUrl": "http://localhost:4200",
+  "video": false,
+
+  "reporter": "junit",
+  "reporterOptions": {
+    "mochaFile": "build/test-reports/report-[hash].xml",
+    "toConsole": true,
+    "jenkinsMode":false
+  }
+
+}
