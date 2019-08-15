@@ -7,20 +7,7 @@ export class Volume extends Position {
   barcode: string;
   barcodeScanTime: number;
 
-  volume: number;
-  width: number;
-  height: number;
-  length: number;
-  matchProbability: number;
-
-  accuracy: number;
-
-  gateNumber: number;
-  forkliftId: number;
-
   status: string;
   transportationStatus: string;
-
-  updateTimestamp: number;
 
 }
